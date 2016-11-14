@@ -1,6 +1,6 @@
 " Use Pathogen as package manager
-call pathogen#runtime_append_all_bundles()
-" call pathogen#infect()
+" call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
 call pathogen#helptags()
 
 " Automatically reload the .vimrc
