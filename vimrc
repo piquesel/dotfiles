@@ -124,9 +124,16 @@ else
   colorscheme zenburn
 endif
 
+if has('gui_macvim')
+   set background=dark
+   colorscheme zenburn
+   "set guifont=Menlo\ Regular:h14
+   set guifont=Literation_Mono_Powerline:h14
+endif
+
 call togglebg#map("<F5>")
 
-" Line numbering
+" Line numbering (set number vs set nonumber)
 set nu
 
 " Allow to access system clipboard
