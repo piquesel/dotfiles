@@ -27,6 +27,7 @@ Plugin 'nvie/vim-flake8'
 " Color schemes
 Plugin 'jnurmine/Zenburn'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'gruvbox-community/gruvbox'
 
 " File browsing
 Plugin 'scrooloose/nerdtree'
@@ -121,7 +122,7 @@ if has('gui_running')
   set background=dark
   colorscheme solarized
 else
-  colorscheme zenburn
+  colorscheme gruvbox 
 endif
 
 if has('gui_macvim')
