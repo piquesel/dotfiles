@@ -16,7 +16,12 @@ Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-scripts/indentpython.vim'
 
 " Best plugin for Auto-complete
+" Think about supertab if YCM turns out not to be OK
+" Supertab: https//github.com/ervandew/supertab
 Bundle 'Valloric/YouCompleteMe'
+
+" TabNine
+" Plugin 'zxqfl/tabnine-vim'
 
 " Syntax checking/highlighting
 Plugin 'vim-syntastic/syntastic'
@@ -33,17 +38,41 @@ Plugin 'gruvbox-community/gruvbox'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 
+" Provides automatic closing of quotes, parenthesis, brackets etc.
+Plugin 'Raimondi/delimitMate'
+
+" Adds file type icons to Vim plugins such as NERDTree, vim-airline...
+Plugin 'ryanoasis/vim-devicons'
+
 " Ignore .pyc in NERDTree
 let NERDTreeIgnore=['\.pyc$', '\~$']
 
 " Super searching: Ctrl-P will allow to search for a file
-Plugin 'kien/ctrlp.vim'
+" Plugin 'kien/ctrlp.vim' is obviously deprecated
+" Following instructions at ctrlpvim.github.io/ctrlp.vim/#installation
+" cd ~/.vim
+" git clone https://github.com/ctrlpvim/ctrlp.vim.git bundle/ctrlp.vim
+set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 " Git integration
 Plugin 'tpope/vim-fugitive'
 
+" JSON plugin
+Plugin 'elzr/vim-json'
+
+" Yaml plugin
+Plugin 'stephpy/vim-yaml'
+
+" JavaScript plugin
+Plugin 'Pangloss/vim-javascript'
+
 " Powerline
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+python3 from powerline.vim import setup as powerline_setup
+python3 powerline_setup()
+python3 del powerline_setup
+
+set laststatus=2
 
 " add all your plugins here (note older versions of Vundle
 "
@@ -88,7 +117,7 @@ au BufNewFile,BufRead *.py
     \ set fileformat=unix
 
 " For full stack development
-au BufNewFile,BufRead *.js, *.html, *.css
+au BufNewFile,BufRead *.js,*.html,*.css
     \ set tabstop=2 |
     \ set softtabstop=2 |
     \ set shiftwidth=2
