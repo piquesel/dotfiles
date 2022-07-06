@@ -44,6 +44,9 @@ Plugin 'Raimondi/delimitMate'
 " Adds file type icons to Vim plugins such as NERDTree, vim-airline...
 Plugin 'ryanoasis/vim-devicons'
 
+" Bash support plugin
+Plugin 'bash-support.vim'
+
 " Ignore .pyc in NERDTree
 let NERDTreeIgnore=['\.pyc$', '\~$']
 
